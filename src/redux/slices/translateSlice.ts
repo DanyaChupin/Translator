@@ -5,11 +5,6 @@ import { TranslateState } from '../../types/types'
 export const translateRequest = createAsyncThunk(
 	'translate/requestStatus',
 	async (value: string) => {
-		const encodedParams = new URLSearchParams()
-		encodedParams.set('q', value)
-		encodedParams.set('target', 'ru')
-		encodedParams.set('source', 'en')
-
 		const options = {
 			method: 'POST',
 			url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2',

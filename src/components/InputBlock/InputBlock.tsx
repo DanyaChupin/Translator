@@ -11,7 +11,6 @@ const InputBlock = () => {
 
 	const onChangeText = useCallback(
 		debounce(str => {
-			console.log(str)
 			dispatch(translateRequest(str))
 		}, 350),
 		[]
